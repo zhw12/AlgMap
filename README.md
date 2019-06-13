@@ -14,7 +14,7 @@ pdffigures, https://github.com/allenai/pdffigures
 ```
 
 ### Preprocessing
-Codes in **preprocess folder** prepare data needed for constructing Algorithm Roadmap.
+Codes in preprocess folder prepare data needed for constructing Algorithm Roadmap.
 
 ```
 cd preprocess/
@@ -83,17 +83,29 @@ python save_coocurred_abbvs.py ${dataset}
 
 #### Prepare Final Data
 Cut off long paragraphs and long sentences, do labelling, padding, 
-and data splitting for final relation extraction.
+and data splitting for final relation extraction. Prepare instances for acronym pairs, feature_type standard or paragraph 
+denote single-sentence or cross-sentence instances.
 ```
 python parse_abbv_in_sents.py ${dataset}
-python prepare_final_data.py ${dataset} standard
-python prepare_final_data.py ${dataset} paragraph 
+python prepare_final_data.py ${dataset} ${feature_type}
 ```
 
+### Pre-processed Dataset
+```
+Google Drive
+```
+
+
+### Training And Testing
 
 #### Train Model
 Training our CANTOR relation extraction model.
 ```
-python train.py main 1 ${dataset} ${model_name}
+python train_cantor.py ${dataset} cantor ${feature_type}
 ```
     
+#### Evaluating Model
+Evaluating model and save predictions.
+```
+python model_eval.py NIPS cantor paragraph
+```
