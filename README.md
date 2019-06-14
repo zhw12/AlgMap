@@ -1,16 +1,13 @@
 # AlgMap
 The source code used for the KDD'2019 paper Mining Algorithm Roadmap in Scientific Publications.
 
-### Environments
-Ubuntu 16.04 LTS,
-Python 3,
-GPU environment.
-sqlite3
-
 ### Requirements
 ```
-pip install -r requirements.txt
+Python 3.6
+pytorch 1.0
+sqlite3
 pdffigures, https://github.com/allenai/pdffigures
+Other python requirements, pip install -r requirements.txt
 ```
 
 ### Preprocessing
@@ -89,16 +86,22 @@ https://drive.google.com/open?id=1R00G5xP141SO5oCt9zL8-COsX5G2H8dy
 ```
 
 
-### Training And Testing
+### Train And Test
 
 #### Train Model
-Training our CANTOR relation extraction model.
+Train our CANTOR relation extraction model.
 ```
 python train_cantor.py ${dataset} cantor ${feature_type}
 ```
     
-#### Evaluating Model
-Evaluating model and save predictions.
+#### Evaluate Model
+Evaluate model and save predictions.
 ```
 python model_eval.py ${dataset} cantor ${feature_type}
+```
+
+#### Construct Algorithm Roadmap
+Construct algorithm roadmap for a query.
+```
+python construct_roadmap.py 
 ```
