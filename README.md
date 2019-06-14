@@ -15,19 +15,11 @@ pdffigures, https://github.com/allenai/pdffigures
 
 ### Preprocessing
 Codes in preprocess folder prepare data needed for constructing Algorithm Roadmap.
+In the experiment, datasets are NIPS, ACL and VLDB.
 
 ```
 cd preprocess/
 ```
-
-
-<!--
-#### Crawl Corpus
-To avoid copyright issue, provide example crawling script from original website.
-```
-python crawler.py
-```
--->
 
 #### Convert Pdf To Text
 Set the correct data path and use the following script to batchly execute pdftotext.
@@ -63,7 +55,7 @@ python pretrain_wordvec.py ${dataset}
 	
 #### Build Vocabulary
 ```
-python build_vocab.py NIPS (1min)
+python build_vocab.py ${dataset}
 ```
     
 
@@ -91,7 +83,7 @@ python prepare_final_data.py ${dataset} ${feature_type}
 ```
 
 ### Pre-processed Dataset
-Pre-processed NIPS, ACL, VLDB dataset before running prepare_final_data.py.
+Pre-processed NIPS, ACL, VLDB datasets before running prepare_final_data.py.
 ```
 https://drive.google.com/open?id=1R00G5xP141SO5oCt9zL8-COsX5G2H8dy
 ```
@@ -108,5 +100,5 @@ python train_cantor.py ${dataset} cantor ${feature_type}
 #### Evaluating Model
 Evaluating model and save predictions.
 ```
-python model_eval.py NIPS cantor paragraph
+python model_eval.py ${dataset} cantor ${feature_type}
 ```
