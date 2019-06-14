@@ -13,8 +13,6 @@ from pathlib import Path
 
 import numpy as np
 from sklearn.model_selection import train_test_split
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 from tqdm import tqdm
 
 sys.path.append(str(Path(__file__).absolute().parent.parent))
@@ -205,9 +203,9 @@ if __name__ == '__main__':
     assert mode == 'standard' or mode == 'paragraph'
 
     dataset_rootdir = Path('../data') / dataset
-    engine = create_engine('sqlite:///{}/corpus.db'.format(dataset_rootdir.absolute()))
-    DBSession = sessionmaker(bind=engine)
-    print(engine)
+    # engine = create_engine('sqlite:///{}/corpus.db'.format(dataset_rootdir.absolute()))
+    # DBSession = sessionmaker(bind=engine)
+    # print(engine)
 
     # manual_entities_dict = {}
     # l2i = {'pos': 1, 'neg': 0}

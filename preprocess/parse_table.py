@@ -190,7 +190,7 @@ if __name__ == '__main__':
             tables[file_prefix] = calib_table_json
 
     # tables = dict(tables)
-    with (dataset_dir / 'talbes.json').open(mode='w') as fout:
+    with (dataset_dir / 'tables.json').open(mode='w') as fout:
         fout.write(json.dumps(dict(tables)))
 
     # elements in the same row / column
