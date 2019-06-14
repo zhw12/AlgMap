@@ -1,7 +1,6 @@
 # coding: utf-8
 from functools import partial
 
-import fire
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -10,7 +9,7 @@ from torch import nn, optim
 from tqdm import tqdm
 
 from common.util import now
-from models.util import save_pr, sample_data, get_batches, load_data, load_abbvid_2_typeid, load_vocab
+from models.util import save_pr, sample_data, get_batches, load_data, load_abbvid_2_typeid
 
 print = partial(print, flush=True)
 
@@ -214,6 +213,3 @@ def eval(model, data, criterion, batch_size=1, use_gpu=True, abbvid_2_typeid=Non
     model.train()
     return all_true_y, all_pred_y, all_pred_p, avg_loss, avg_type_loss, type_true_y, type_pred_y
 
-
-if __name__ == '__main__':
-    fire.Fire()

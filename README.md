@@ -1,5 +1,5 @@
 # AlgMap
-The source code used for the paper Mining Algorithm Roadmap in Scientific Publications.
+The source code used for the KDD'2019 paper Mining Algorithm Roadmap in Scientific Publications.
 
 ### Environments
 Ubuntu 16.04 LTS,
@@ -91,8 +91,9 @@ python prepare_final_data.py ${dataset} ${feature_type}
 ```
 
 ### Pre-processed Dataset
+Pre-processed NIPS, ACL, VLDB dataset before running prepare_final_data.py.
 ```
-Google Drive
+https://drive.google.com/open?id=1R00G5xP141SO5oCt9zL8-COsX5G2H8dy
 ```
 
 
