@@ -1,5 +1,6 @@
 # AlgMap
-The source code used for the KDD'2019 paper Mining Algorithm Roadmap in Scientific Publications.
+The source code and data used in the KDD'2019 paper [Mining Algorithm Roadmap in Scientific Publications](https://sites.cs.ucsb.edu/~klee/papers/Roadmap_KDD19.pdf).
+A corresponding online demo can be found at http://fts.cs.ucsb.edu/roadmap.
 
 ### Requirements
 ```
@@ -104,4 +105,17 @@ python model_eval.py ${dataset} cantor ${feature_type}
 Construct algorithm roadmap for a query.
 ```
 python construct_roadmap.py 
+```
+
+### References
+If you found the repository useful, please cite the following:
+
+H. Zha, W. Chen, K. L, X. Yan, [Mining Algorithm Roadmap in Scientific Publications](https://sites.cs.ucsb.edu/~klee/papers/Roadmap_KDD19.pdf)
+```
+@inproceedings{zha2019mining,
+  title={Mining Algorithm Roadmap in Scientific Publications},
+  author={Hanwen Zha, Wenhu Chen, Keqian Li and Xifeng Yan},
+  booktitle={Proceedings of the 25th ACM SIGKDD International Conference on Knowledge Discovery \& Data Mining., {KDD}},
+  year={2019}
+}
 ```
