@@ -1,5 +1,5 @@
 torch==1.0.0
-ujson == 1.35
+ujson == 5.2.0
 gensim == 3.2.0
 sklearn == 0.0
 tqdm
