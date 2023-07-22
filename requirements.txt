@@ -1,4 +1,4 @@
-torch==1.0.0
+torch==1.13.1
 ujson == 1.35
 gensim == 3.2.0
 sklearn == 0.0
